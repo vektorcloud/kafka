@@ -1,6 +1,6 @@
 FROM quay.io/vektorcloud/oracle-jre:latest
 
-RUN VERSION=0.10.1.0 && \
+RUN VERSION=0.10.1.1 && \
   apk update && \
   apk add --no-cache gpgme bash && \
   apk --no-cache --repository http://dl-cdn.alpinelinux.org/alpine/edge/community add dumb-init && \
