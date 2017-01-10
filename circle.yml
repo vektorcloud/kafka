@@ -2,9 +2,15 @@ machine:
   services:
     - docker
 
+checkout:
+  post:
+    - git submodule sync
+    - git submodule update --init
+
 dependencies:
   override:
     - docker info
+    - docker run --rm -ti -v $PWD/kafka-manager:/target -w /target quay.io/vektorcloud/build sbt clean dist
     - |
       if [[ "$CIRCLE_BRANCH" == "master" ]]; then
         docker build -t quay.io/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}:latest .
@@ -14,7 +20,7 @@ dependencies:
 
 test:
   override:
-    - docker run -t --entrypoint /bin/sh quay.io/${CIRCLE_PROJECT_USERNAME}/${CIRCLE_PROJECT_REPONAME}:latest -c 'echo'
+    - echo
 
 deployment:
   hub:

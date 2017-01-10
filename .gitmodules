@@ -1,0 +1,3 @@
+[submodule "kafka-manager"]
+	path = kafka-manager
+	url = https://github.com/yahoo/kafka-manager.git
