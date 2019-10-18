@@ -12,4 +12,4 @@ You need to build the kafka-manager prior to building the docker image
     docker run --rm -ti -v $PWD/kafka-manager:/target -w /target quay.io/vektorcloud/build sbt clean dist
     docker build -t quay.io/vektorcloud/kafka .
 
-[circleci]: https://img.shields.io/circleci/project/github/vektorcloud/kafka.svg "kafka"
+[circleci]: https://img.shields.io/circleci/build/gh/vektorcloud/kafka?color=1dd6c9&logo=CircleCI&logoColor=1dd6c9&style=for-the-badge "kafka"
