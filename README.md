@@ -1,6 +1,6 @@
 # kafka
 
-![circleci][circleci]
+[![circleci][circleci]](https://circleci.com/gh/vektorcloud/kafka)
 
 Tiny Alpine image for running [Apache Kafka](http://kafka.apache.org/) with [Kafka Manager](https://github.com/yahoo/kafka-manager).
 
